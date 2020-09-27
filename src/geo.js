@@ -37,13 +37,13 @@ const getArcLength = (latA, longA, latB, longB) => {
 
   const latARad = degToRad(latA);
   const longARad = degToRad(longA);
-  const LatBRad = degToRad(latB);
+  const latBRad = degToRad(latB);
   const longBRad = degToRad(longB);
 
   const centralAngle = Math.acos(
-    Math.sin(latARad) * Math.sin(LatBRad) +
+    Math.sin(latARad) * Math.sin(latBRad) +
       Math.cos(latARad) *
-        Math.cos(LatBRad) *
+        Math.cos(latBRad) *
         Math.cos(Math.abs(longARad - longBRad))
   );
 
