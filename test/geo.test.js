@@ -11,6 +11,15 @@ describe("geo", () => {
 
   test("getArcLength throws a TypeError if any parameter is not a number", () => {
     expect(() => {
+      geo.getArcLength("a", 2, 3, 4);
+    }).toThrow(TypeError);
+    expect(() => {
+      geo.getArcLength(1, "a", 3, 4);
+    }).toThrow(TypeError);
+    expect(() => {
+      geo.getArcLength(1, 2, "a", 4);
+    }).toThrow(TypeError);
+    expect(() => {
       geo.getArcLength(1, 2, 3, "a");
     }).toThrow(TypeError);
   });
