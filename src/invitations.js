@@ -56,13 +56,12 @@ const getInvitations = (customers) => {
  * is below a maximum.
  *
  * @param {Array} customers - Customer objects
- * @param {Array} parameters - The parameters
- * @param {Array} parameters.officeLatitude - The office latitude in degrees
- * @param {Array} parameters.officeLongitude - The office longitude in degrees
- * @param {Array} parameters.maxDistanceToOffice - Maximum distance to the office in km
+ * @param {Object} parameters - The parameters
+ * @param {number} parameters.officeLatitude - The office latitude in degrees
+ * @param {number} parameters.officeLongitude - The office longitude in degrees
+ * @param {number} parameters.maxDistanceToOffice - Maximum distance to the office in km
  * @param {string} [parameters.customersFilePath=customers.txt] - Customers file relative path
  * @param {string} [parameters.outputFilePath=output.txt] - Output file relative path
- * @returns {Array} Invitation objects
  */
 const createInvitations = (parameters) => {
   const { officeLatitude, officeLongitude, maxDistanceToOffice } = parameters;
