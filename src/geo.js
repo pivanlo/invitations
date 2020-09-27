@@ -32,7 +32,7 @@ const getArcLength = (latA, longA, latB, longB) => {
     typeof latB !== "number" ||
     typeof longB !== "number"
   ) {
-    throw new TypeError("All parameters to getArcLength must be numbers");
+    throw new TypeError("All arguments to getArcLength must be numbers");
   }
 
   const latARad = degToRad(latA);
